@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+    <title>Tip Calculator App</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <img class="logoImg" src="./images/logo.svg">
+
+    <div class="wrapper">
+        
+        <div>
+            <div class="bill">
+                <div class="parPack">
+                    <p class="billTitle">Bill</p>
+                    <p class="billError"></p>
+                </div>
+                <input class="billValue" type="number" min="0">
+            </div>
+    
+            <div class="tip">
+                <div class="parPack">
+                    <p class="tipTitle">Select tip %</p>
+                    <p class="tipError"></p>
+                </div>
+                <form class="tipForm">
+                    <input class="tipInput" type="radio" id="input5" name="tipValue" value=0.05>
+                    <label for="input5">5%</label>
+                    
+                    <input class="tipInput" type="radio" id="input10" name="tipValue" value=0.1 checked="checked">
+                    <label for="input10">10%</label>
+                    
+                    <input class="tipInput" type="radio" id="input15" name="tipValue" value=0.15>
+                    <label for="input15">15%</label>
+                    
+                    <input class="tipInput" type="radio" id="input25" name="tipValue" value=0.25>
+                    <label for="input25">25%</label>
+                    
+                    <input class="tipInput" type="radio" id="input50" name="tipValue" value=0.5>
+                    <label for="input50">50%</label>
+                    
+                    <input class="tipInput" type="radio" id="inputCustom" name="tipValue" value=0.1>
+                    <label for="inputCustom">Custom</label>
+
+                  </form>
+    
+            </div>
+    
+            <div class="people">
+                <div class="parPack">
+                    <p class="peopleTitle">Number of People</p>
+                    <p class="peopleError"></p>
+                </div>
+                <input class="peopleValue" type="number" min="0">
+            </div>
+        </div>
+
+        <div class="result">
+            
+            <div class="resultWrapper">
+
+                <div class="resultInfo">
+                    <p>Tip Amount</p>
+                    <p>/ person</p>
+                    <p>Total</p>
+                    <p>/ person</p>
+                </div>
+
+                <div class="resultValue">
+                    <p class="resultValueAmount"></p>
+                    <p class="resultValueTotal"></p>
+                </div>
+
+            </div>
+
+            <button class="resetBtn">RESET</button>
+        </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

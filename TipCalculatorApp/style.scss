@@ -1,0 +1,218 @@
+// generally styles
+
+$primary: hsl(172, 67%, 45%);
+$VeryDarkCyan: hsl(183, 100%, 15%);
+$DarkGrayishCyan: hsl(186, 14%, 43%);
+$GrayishCyan: hsl(184, 14%, 56%);
+$LightGrayishCyan: hsl(185, 41%, 84%);
+$VeryLightGrayishCyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+@mixin input {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 1.8em;
+    background-size: 10px;
+    background-position: 3%;
+    background-color: $LightGrayishCyan;
+    text-align: right;
+    font-size: 16px;
+    color: $DarkGrayishCyan;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+    outline: none;
+    &:focus {
+        border: 2px solid $DarkGrayishCyan;
+    }
+}
+
+
+@mixin leftTopMargin {
+    margin-top: 1em;
+    margin-left: 10%;
+}
+
+[class*='Title'] {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.parPack {
+    display: flex;
+    justify-content: space-between;
+
+    [class*='Error'] {
+        color: tomato;
+        margin-right: 10%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $LightGrayishCyan;
+    font-size: 18px;
+}
+
+.logoImg {
+    margin-top: .8em;
+}
+
+.wrapper {
+    background-color: white;
+    margin-top: 1.5em;
+    width: 100%;
+    max-width: 576px;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    color: $DarkGrayishCyan;
+    padding-bottom: 2em;
+}
+
+// bill section
+.bill {
+   @include leftTopMargin;
+
+    .billValue {
+        background: url('../images/icon-dollar.svg') no-repeat;
+        @include input;
+    }
+}
+
+// tip section
+.tip {
+   @include leftTopMargin;
+
+    .tipForm {
+        margin-right: 10%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .tipInput {
+            display: none;
+        }
+
+        label {
+            margin-top: .5em;
+            display: block;
+            width: 130px;
+            height: 40px;
+            background-color: $DarkGrayishCyan;
+            color: $White;
+            font-weight: bold;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        label:last-of-type {
+            background-color: $LightGrayishCyan;
+        }
+
+        input:checked + label {
+            background-color: $primary;
+            color: $VeryDarkCyan;
+        }
+
+    }
+}
+// people section
+.people {
+    @include leftTopMargin;
+
+    .peopleValue {
+        background: url('../images/icon-person.svg') no-repeat;
+        @include input()
+    }
+}
+// result section
+.result {
+    @include leftTopMargin;
+    background-color: $DarkGrayishCyan;
+    width: 80%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+
+    .resultWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        
+        .resultInfo p:nth-of-type(odd) {
+            font-size: 18px;
+            margin-top: 2.5em;
+        }
+        
+        .resultInfo p:nth-of-type(even) {
+            font-size: 16px;
+            color: $LightGrayishCyan;
+            margin-top: -.5em;
+        }
+
+        .resultValue {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            color: $primary;
+            font-size: 26px;
+            font-weight: bold;
+        }
+    }
+
+    .resetBtn {
+        @include leftTopMargin;
+        width: 80%;
+        padding: 1em;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 2em;
+        background-color: $primary;
+        color: $DarkGrayishCyan;
+        font-weight: bold;
+        font-size: 18px;
+        transition: background-color .5s;
+    }
+
+    .resetBtn:hover {
+        cursor: pointer;
+        background-color: $LightGrayishCyan;
+    } 
+}
+
+@media (min-width: 1200px) {
+    
+    body {
+        min-height: 100vH;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .wrapper {
+        max-width: 1000px;
+        border-radius: 20px;
+        display: flex;
+        padding: 4em 2em;
+        margin-bottom: 10em;
+    }
+    
+    .tip {
+        .tipForm {
+            label {
+                width: 90px;
+            }
+        }
+    }
+}

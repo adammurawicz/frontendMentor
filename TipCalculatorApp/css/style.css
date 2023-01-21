@@ -1,0 +1,242 @@
+[class*=Title] {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.parPack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.parPack [class*=Error] {
+  color: tomato;
+  margin-right: 10%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: hsl(185deg, 41%, 84%);
+  font-size: 18px;
+}
+
+.logoImg {
+  margin-top: 0.8em;
+}
+
+.wrapper {
+  background-color: white;
+  margin-top: 1.5em;
+  width: 100%;
+  max-width: 576px;
+  bottom: 0;
+  border-radius: 20px 20px 0 0;
+  color: hsl(186deg, 14%, 43%);
+  padding-bottom: 2em;
+}
+
+.bill {
+  margin-top: 1em;
+  margin-left: 10%;
+}
+.bill .billValue {
+  background: url("../images/icon-dollar.svg") no-repeat;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 1.8em;
+  background-size: 10px;
+  background-position: 3%;
+  background-color: hsl(185deg, 41%, 84%);
+  text-align: right;
+  font-size: 16px;
+  color: hsl(186deg, 14%, 43%);
+  font-weight: bold;
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+  outline: none;
+}
+.bill .billValue:focus {
+  border: 2px solid hsl(186deg, 14%, 43%);
+}
+
+.tip {
+  margin-top: 1em;
+  margin-left: 10%;
+}
+.tip .tipForm {
+  margin-right: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.tip .tipForm .tipInput {
+  display: none;
+}
+.tip .tipForm label {
+  margin-top: 0.5em;
+  display: block;
+  width: 130px;
+  height: 40px;
+  background-color: hsl(186deg, 14%, 43%);
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+}
+.tip .tipForm label:last-of-type {
+  background-color: hsl(185deg, 41%, 84%);
+}
+.tip .tipForm input:checked + label {
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+}
+
+.people {
+  margin-top: 1em;
+  margin-left: 10%;
+}
+.people .peopleValue {
+  background: url("../images/icon-person.svg") no-repeat;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 1.8em;
+  background-size: 10px;
+  background-position: 3%;
+  background-color: hsl(185deg, 41%, 84%);
+  text-align: right;
+  font-size: 16px;
+  color: hsl(186deg, 14%, 43%);
+  font-weight: bold;
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+  outline: none;
+}
+.people .peopleValue:focus {
+  border: 2px solid hsl(186deg, 14%, 43%);
+}
+
+.result {
+  margin-top: 1em;
+  margin-left: 10%;
+  background-color: hsl(186deg, 14%, 43%);
+  width: 80%;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+}
+.result .resultWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.result .resultWrapper .resultInfo p:nth-of-type(odd) {
+  font-size: 18px;
+  margin-top: 2.5em;
+}
+.result .resultWrapper .resultInfo p:nth-of-type(even) {
+  font-size: 16px;
+  color: hsl(185deg, 41%, 84%);
+  margin-top: -0.5em;
+}
+.result .resultWrapper .resultValue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: hsl(172deg, 67%, 45%);
+  font-size: 26px;
+  font-weight: bold;
+}
+.result .resetBtn {
+  margin-top: 1em;
+  margin-left: 10%;
+  width: 80%;
+  padding: 1em;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 2em;
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(186deg, 14%, 43%);
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.result .resetBtn:hover {
+  cursor: pointer;
+  background-color: hsl(185deg, 41%, 84%);
+}
+
+@media (min-width: 1200px) {
+  body {
+    min-height: 100vH;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper {
+    max-width: 1000px;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4em 2em;
+    margin-bottom: 10em;
+  }
+  .tip .tipForm label {
+    width: 90px;
+  }
+}/*# sourceMappingURL=style.css.map */
