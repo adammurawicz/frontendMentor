@@ -1,0 +1,118 @@
+$neonGreen: hsl(150, 100%, 66%);
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    text-align: center;
+    background-color: rgb(62, 82, 163);
+    color: #f5f5f5;
+    height: 100vH;
+    overflow: hidden;
+}
+
+.wrapper {
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    width: 90%;
+    height: 60vH;
+    margin: 20% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .adviceInfo {
+        margin-top: 2em;
+        color: $neonGreen;
+        font-size: 1rem;
+    }
+
+    .adviceText {
+
+        .adviceText-p {
+            margin: 0 1em;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        img {
+            padding: 2em 0;
+        }
+    }
+
+    .dice {
+        background-color: $neonGreen;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: 0 auto -30px;
+        transform: rotateX(50%);
+        transition: all .5s;
+
+        &:hover {
+            -webkit-box-shadow: 0px 0px 40px 10px rgba(150, 100%, 66%, 1);
+            -moz-box-shadow: 0px 0px 40px 10px rgba(150, 100%, 66%, 1);
+            box-shadow: 0px 0px 40px 10px rgba(150, 100%, 66%, 1);
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.attribution {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: #f5f5f5;
+    
+    a {
+        text-decoration: none;
+        color: #f5f5f5;
+    }
+}
+
+@media (min-width: 996px) {
+    
+.wrapper {
+    border-radius: 15px;
+    max-width: 900px;
+    height: 50%;
+    margin: 15% auto;
+
+
+    .adviceInfo {
+        margin-top: 1.5em;
+        font-size: 1.4rem;
+    }
+
+    
+    .adviceText {
+        
+        img {
+            padding: 4em;
+        }
+    }
+
+    .dice {
+        background-color: $neonGreen;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto -40px;
+
+        img {
+            transform: scale(1.2);
+        }
+    }
+}
+
+
+
+.attribution {
+    font-size: 1rem;
+}
+}

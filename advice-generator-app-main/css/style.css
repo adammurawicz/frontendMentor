@@ -1,0 +1,108 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  text-align: center;
+  background-color: rgb(62, 82, 163);
+  color: #f5f5f5;
+  height: 100vH;
+  overflow: hidden;
+}
+
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  width: 90%;
+  height: 60vH;
+  margin: 20% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.wrapper .adviceInfo {
+  margin-top: 2em;
+  color: hsl(150deg, 100%, 66%);
+  font-size: 1rem;
+}
+.wrapper .adviceText .adviceText-p {
+  margin: 0 1em;
+  font-size: 2rem;
+  text-align: center;
+}
+.wrapper .adviceText img {
+  padding: 2em 0;
+}
+.wrapper .dice {
+  background-color: hsl(150deg, 100%, 66%);
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  margin: 0 auto -30px;
+  -webkit-transform: rotateX(50%);
+          transform: rotateX(50%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.wrapper .dice:hover {
+  -webkit-box-shadow: 0px 0px 40px 10px rgb(150, 255, 168);
+  box-shadow: 0px 0px 40px 10px rgb(150, 255, 168);
+  cursor: pointer;
+}
+
+.attribution {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: #f5f5f5;
+}
+.attribution a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+@media (min-width: 996px) {
+  .wrapper {
+    border-radius: 15px;
+    max-width: 900px;
+    height: 50%;
+    margin: 15% auto;
+  }
+  .wrapper .adviceInfo {
+    margin-top: 1.5em;
+    font-size: 1.4rem;
+  }
+  .wrapper .adviceText img {
+    padding: 4em;
+  }
+  .wrapper .dice {
+    background-color: hsl(150deg, 100%, 66%);
+    width: 80px;
+    height: 80px;
+    margin: 0 auto -40px;
+  }
+  .wrapper .dice img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .attribution {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */
