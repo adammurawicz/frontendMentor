@@ -1,0 +1,138 @@
+@import './colors';
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+    header {
+        flex-direction: row;
+    }
+}
+
+// future section starts
+
+.future {
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+        
+        &__heading {
+            margin-top: 1em;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        &__content {
+            &__p {
+                margin-top: 1em;
+                color: $veryDarkBlue;
+            }
+
+            &__btn {
+                margin-top: 1em;
+                border: none;
+                padding: 1em 2em;
+                background-color: $softRed;
+                color: $offWhite;
+                transition: background-color .5s;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: hsl(5, 87%, 27%);;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 776px) {
+    .future {
+    
+        &__text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            
+            &__heading {
+                font-size: 2.6rem;
+                margin-top: 1.2em;
+                margin-right: 1em;
+            }
+    
+            &__content {
+                margin-top: 1.2em;
+                margin-left: 1em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                &__p {
+                    font-size: 1.5rem;
+                }
+    
+                &__btn {
+                    padding: 1em 2em;
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}
+
+// new section start
+
+.new {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $veryDarkBlue;
+    padding: 1em;
+
+    &__heading {
+        color: $softOrange;
+        font-size: 1.5rem;
+    }
+    
+    &__content {
+        border-bottom: 1px solid $grayishBlue;
+        margin-top: 2em;
+        padding-bottom: 1.5em;
+        
+        &__heading {
+            color: $offWhite;
+            font-size: 1.2rem;
+        }
+        
+        &__p {
+            margin-top: 1em;
+            color: $grayishBlue;
+            font-size: 1rem;
+        }
+    }
+
+    .new__content:last-of-type {
+        border: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .new {
+        margin-left: 2em;
+        &__heading {
+            font-size: 1.8rem;
+        }
+    
+        &__content {
+            &__heading {
+                font-size: 1.4rem;
+            }
+            
+            &__p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

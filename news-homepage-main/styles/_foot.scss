@@ -1,0 +1,13 @@
+@import './colors';
+
+.footer {
+    margin-top: 4em;
+    background-color: $veryDarkBlue;
+    color: $offWhite;
+    padding: .7em;
+    text-align: center;
+
+    a {
+        color: $grayishBlue;
+    }
+}

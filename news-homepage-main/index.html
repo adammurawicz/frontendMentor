@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!-- nav start -->
+
+<nav class="nav nav-mobile">
+  <img class="logoImg nav-mobile__logoImg" src="./assets/images/logo.svg" alt="">
+  <button class="nav-mobile__btn"> <img class="nav-mobile__menuImg" src="./assets/images/icon-menu.svg" alt=""> </button>
+</nav>
+
+<div class="nav-popup">
+  <button class="nav-popup__btn">X</button>
+  <ul class="nav-popup__ul">
+    <li class="nav-popup__ul--item"> <a href="#">Home</a></li>
+    <li class="nav-popup__ul--item"> <a href="#">New</a></li>
+    <li class="nav-popup__ul--item"> <a href="#">Popular</a></li>
+    <li class="nav-popup__ul--item"> <a href="#">Trending</a></li>
+    <li class="nav-popup__ul--item"> <a href="#">Categories</a></li>
+  </ul>
+</div>
+
+  <nav class="nav nav-desktop">
+    <img class="logoImg nav-desktop__logoImg" src="./assets/images/logo.svg" alt="">
+    <ul class="nav-desktop__ul">
+      <li class="nav-dektop__ul--item"> <a href="#">Home</a></li>
+      <li class="nav-dektop__ul--item"> <a href="#">New</a></li>
+      <li class="nav-dektop__ul--item"> <a href="#">Popular</a></li>
+      <li class="nav-dektop__ul--item"> <a href="#">Trending</a></li>
+      <li class="nav-dektop__ul--item"> <a href="#">Categories</a></li>
+    </ul>
+  </nav>
+
+
+<!-- nav end -->
+<!-- header start -->
+<div class="wrapper">
+
+<header>
+
+
+<section class="future">
+
+  <picture class="future__picture">
+    <source srcset="./assets/images/image-web-3-mobile.jpg" media="(max-width: 776px)">
+    <source srcset="./assets/images/image-web-3-desktop.jpg" media="(min-width: 776px)">
+    <img src="./assets/images/image-web-3-mobile.jpg" alt="Flowers">
+  </picture>
+
+  <div class="future__text">
+    <h1 class="future__text__heading">The Bright Future of Web 3.0?</h1>
+    <div class="future__text__content">
+      <p class="future__text__content__p">  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+      <button class="future__text__content__btn">READ MORE</button>
+    </div>
+  </div>
+
+</section>
+
+<section class="new">
+  
+  <h2 class="new__heading">NEW</h2>
+
+  <div class="new__content">
+    <h3 class="new__content__heading">Hydrogen VS Electric Cars</h3>
+    <p class="new__content__p">Will hydrogen-fueled cars ever catch up to EVs?</p>
+  </div>
+  
+  <div class="new__content">
+    <h3 class="new__content__heading">The Downsides of AI Artistry</h3>
+    <p class="new__content__p">What are the possible adverse effects of on-demand AI image generation?</p>
+  </div>
+  
+  <div class="new__content">
+    <h3 class="new__content__heading">Is VC Funding Drying Up?</h3>
+    <p class="new__content__p">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+  </div>
+
+</section>
+
+</header>
+
+<main>
+
+<section class="posts">
+
+  <div class="posts__post"> 
+    <img class="posts__post__img" src="./assets/images/image-retro-pcs.jpg" alt="post picture">
+    <div class="posts__post__content">
+      <p class="posts__post__content__number">01</p>
+      <p class="posts__post__content__title">Reviving Retro PCs</p>
+      <p class="posts__post__content__text">What happens when old PCs are given modern upgrades?</p>
+    </div>
+  </div>
+
+  <div class="posts__post"> 
+    <img class="posts__post__img" src="./assets/images/image-top-laptops.jpg" alt="post picture">
+    <div class="posts__post__content">
+      <p class="posts__post__content__number">02</p>
+      <p class="posts__post__content__title">Top 10 Laptops of 2022</p>
+      <p class="posts__post__content__text">Our best picks for various needs and budgets.</p>
+    </div>
+  </div>
+
+  <div class="posts__post"> 
+    <img class="posts__post__img" src="./assets/images/image-gaming-growth.jpg" alt="post picture">
+    <div class="posts__post__content">
+      <p class="posts__post__content__number">03</p>
+      <p class="posts__post__content__title">The Growth of Gaming</p>
+      <p class="posts__post__content__text">How the pandemic has sparked fresh opportunities.</p>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+<!-- main end -->
+
+  
+
+</div>
+
+<footer class="footer attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="https://www.murawicz.pl/">Adam Murawicz</a>.
+</footer>
+
+<div class="dark"></div>
+
+<script src="./main.js"></script>
+
+
+</body>
+</html>
