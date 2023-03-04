@@ -1,0 +1,144 @@
+@use 'colors' as c;
+@use 'mixin' as m;
+
+// nav Mobile
+
+.navMobile {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+    background-color: c.$veryLightGray;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__btn {
+        background-image: url('../images/icon-hamburger.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 35px;
+        width: 35px;
+        padding: 1em;
+        border: none;
+        transition: transform .3s background-image .5s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(0.9);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .navMobile {
+        display: none;
+    }
+}
+
+//nav popup
+
+.navPopUp {
+    position: fixed;
+    width: 100%;
+    right: -800px;
+    height: 100%;
+    top: 0;
+    background-color: c.$darkViolet;
+    transition: right .5s;
+    z-index: 3;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10em;
+        text-align: center;
+        &__a {
+            color: c.$veryLightGray;
+            margin: 1em;
+            padding: 1em 2em;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            transition: border .3s;
+
+            &:hover {
+                border: 1px solid  c.$veryLightGray;
+            }
+        }
+    }
+
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+.active {
+    right: 0;
+}
+
+@media (min-width: 768px) {
+    .navPopUp {
+        display: none;
+    }
+}
+
+// nav menu Desktop
+
+.navDesktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navDesktop {
+        display: block;
+        z-index: 3;
+        background-color: c.$veryLightGray;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+        &__wrapper {
+            @include m.wrapper;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            &__linkContainer {
+                a {
+                    text-decoration: none;
+                    color: c.$darkViolet;
+                    margin-left: .7em;
+                    margin-right: .7em;
+                    text-transform: uppercase;
+                    padding: .5em 1em;
+                    transition: border .3s;
+
+                    &:hover {
+                        border: 1px solid c.$darkViolet;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes navItemsAnimation {
+    from {
+        transform: translateX(200%);
+    }
+    
+    to {
+        transform: translateX(0);
+    }
+}
+
+.nav-items-animation {
+    animation: navItemsAnimation 1s both;
+}

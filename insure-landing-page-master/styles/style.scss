@@ -1,0 +1,14 @@
+@use 'reset.scss';
+@use 'colors.scss' as c;
+@use 'nav.scss';
+@use 'header';
+@use 'mainPart';
+@use 'footer';
+
+
+body {
+    background-color: c.$veryLightGray;
+    overflow-x: hidden;
+}
+
+

@@ -1,0 +1,154 @@
+@use 'colors' as c;
+@use 'mixin' as m;
+
+.header {
+    margin-top: 4em;
+    background-color: c.$darkViolet;
+    color: c.$veryLightGray;
+
+    &__wrapper {
+        text-align: center;
+
+        hr {
+            display: none;
+        }
+
+        &__img {
+            position: relative;
+            width: 100%;
+            z-index: 2;
+        }
+
+        h1{
+            font-size: 2rem;
+            padding: 1em;
+            margin-top: 1em;
+        }
+
+        p {
+            padding: 1em;
+            line-height: 1.5;
+        }
+
+        button {
+            padding: 1em 2em;
+            margin-top: 2em;
+            margin-bottom: 6em;
+            background-color: c.$darkViolet;
+            border: 1px solid c.$veryLightGray;
+            transition: background-color .3s;
+
+            a{
+                color: c.$veryLightGray;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: color .3s;
+            }
+
+            &:hover {
+                background-color: c.$veryLightGray;
+                color: c.$darkViolet;
+                cursor: pointer;
+            }
+            
+            &:hover a {
+                color: c.$darkViolet;
+            }
+        }
+    }
+
+    .header__pattern__left {
+        position: absolute;
+        top: 28em;
+    }
+
+    .header__pattern__right {
+        position: absolute;
+        bottom: -10em;
+        right: 0;
+    }
+
+}
+
+@media (min-width: 556px) {
+    .header {
+        &__wrapper {
+            &__img {
+                margin-top: 2em;
+                width: 90%;
+            }
+    
+            p {
+                padding: 1em 2em;
+            }
+        }
+    
+        .header__pattern__left {
+
+            top: 30em;
+        }
+    
+        .header__pattern__right {
+            position: absolute;
+            bottom: -10em;
+            right: 0;
+        }
+    
+    }
+}
+
+@media (min-width: 768px) {
+    
+.header {
+    max-height: 60vH;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        @include m.wrapper;
+        text-align: left;
+
+        hr {
+            margin-left: 0;
+            margin-top: 4em;
+            width: 40%;
+            display: block;
+        }
+
+        &__img {
+            margin-top: 4em;
+            z-index: 1;
+        }
+
+        h1{
+            font-size: 2.5rem;
+            padding: 1em 0;
+        }
+
+        p {
+            padding-left: 0;
+            text-align: left;
+            margin-left: 0;
+            line-height: 2;
+        }
+
+        button {
+            padding: 1.5em 3em;
+            margin-top: 3em;
+        }
+    }
+
+    .header__pattern__left {
+        position: absolute;
+        top: 28em;
+    }
+
+    .header__pattern__right {
+        position: absolute;
+        bottom: -10em;
+        right: 0;
+    }
+
+}
+}

@@ -1,0 +1,132 @@
+@use 'colors' as c;
+@use 'mixin' as m;
+
+.main {
+    @include m.wrapper;
+    .main__sectionOne {
+        margin-top: 4em;
+
+        hr {
+            margin: 2em auto;
+            width: 40%;
+            border: 1px solid c.$darkViolet;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    .main__sectionTwo {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &__wrapper {
+            margin: 2em;
+            
+            img {
+                margin: 1em;
+            }
+
+            h3 {
+                margin: 1em;
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+
+            p {
+                line-height: 1.5;
+            }
+        }
+    }
+    
+    .main__sectionThree {
+        position: relative;
+        overflow: hidden;
+        background-color: c.$darkViolet;
+        color: c.$veryLightGray;
+        padding: 4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        button {
+            z-index: 2;
+            margin: 2em;
+            background-color: c.$darkViolet;
+            color: c.$veryLightGray;
+            border: 1px solid c.$veryLightGray;
+            padding: .8em 2em;
+            transition: color .3s, background .3s;
+            
+            &:hover {
+                background-color: c.$veryLightGray;
+                color: c.$darkViolet;
+
+            }
+        }
+
+        picture {
+            position: absolute;
+            overflow: hidden;
+            right: 0;
+        }
+
+    }
+}
+
+@media (min-width: 768px){
+    .main {
+        .main__sectionOne {
+            margin-top: 8em;
+    
+            hr {
+                margin: 2em 0;
+                left: 0;
+                max-width: 150px;
+            }
+    
+            h2 {
+                font-size: 1.8rem;
+                text-align: left;
+            }
+        }
+    
+        .main__sectionTwo {
+            margin-top: 4em;
+            display: flex;
+            flex-direction: row;
+            text-align: justify;
+    
+            &__wrapper {
+                margin: 2em 4em 2em 0;
+                
+                img {
+                    margin: 1em 0;
+                }
+    
+                h3 {
+                    margin: 1em 0;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .main__sectionThree {
+            margin-top: 4em;
+        }
+    }
+}
