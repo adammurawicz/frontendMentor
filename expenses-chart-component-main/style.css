@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+}
+
+:root {
+    --softRed: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --darkBrown: hsl(25, 47%, 15%);
+    --mediumBrown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --veryPaleOrange: hsl(33, 100%, 98%);
+    --white: #f5f5f5;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 1em auto;
+    max-width: 800px;
+    margin-top: 2em;
+    padding: 2em;
+}
+
+.sectionTop, .sectionTop h2, .sectionTop p, .sectionTopCircles {
+    background-color: var(--softRed);
+    color: var(--white);
+}
+
+.sectionTop {
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionTop h2 {
+    font-size: 1rem;
+    padding: 0.5em 0;
+}
+
+.sectionTop p {
+    font-size: 1.5rem;
+    padding: 0.5em 0;
+}
+
+.sectionTopCircles {
+    display: flex;
+    flex-direction: row;
+}
+
+.sectionTop .circle {
+    margin-right: 1em;
+    background: none;
+    border: 2px solid var(--white);
+    z-index: 2;
+}
+
+.sectionTop .circle,
+.sectionTop .circle2 {
+    margin-top: 1em;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.sectionTop .circle2 {
+    position: absolute;
+    content: '';
+    background-color: rgba(0, 0, 0, .75);
+    border: none;
+    margin-left: 20px;
+    z-index: 1;
+}
+
+.sectionBottom {
+    height: 500px;
+}
+
+.figure {
+    height: 130px;
+}
+
+.sectionBottom, 
+.sectionBottom  p, 
+.sectionBottom h3,
+.figure,
+.figureDay 
+{
+    background-color: var(--veryPaleOrange);
+}
+
+.sectionBottom h3 {
+    text-align: left;
+}
+
+.figure {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10em;
+    margin-bottom: 2em;
+}
+
+.figureDay {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.figureDay .figureDay__figure {
+    width: 30px;
+    height: 10px;
+    background-color: var(--softRed);
+    border-radius: 5px;
+    transition: height 2s;
+}
+
+@media (min-width: 776px) {
+    .figureDay .figureDay__figure {
+        width: 50px;
+    }
+}
+
+.figureDay p {
+    margin-top: .5em;
+    color: var(--mediumBrown);
+}
+
+hr {
+    border: 1px solid var(--cream);
+}
+
+.text,
+.text__right,
+.text__left {
+    background-color: var(--veryPaleOrange);
+}
+
+.text{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5em;
+}
+
+.text__left,
+.text__right {
+    display: flex;
+    flex-direction: column;
+}
+
+.text__left {
+    justify-content: center;
+}
+
+.text__left .text__left__info {
+    color: var(--mediumBrown);
+}
+
+.text__left .text__left__number {
+    font-size: 2rem;
+    color: var(--darkBrown);
+    margin-top: 0.3em;
+}
+
+.text .text__right {
+    justify-content: center;
+}
+
+.text__right .text__right__up {
+    color: var(--darkBrown);
+    font-weight: bold;
+}
+
+.text__right .text__right__bottom {
+    color: var(--mediumBrown);
+}
+
+.footer,
+.footer a {
+    color: var(--white);
+    background-color: var(--darkBrown);
+}
+
+.footer {
+    width: 100%;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+}
